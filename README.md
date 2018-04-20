@@ -3,10 +3,10 @@
 This is a sample project to be used during the demonstration of architecture techniques standards and best practices on the 2018 edition of the Azure Boot Camp event in Dublin, Ireland.
 
 ## Getting Started
-**01.** Open the project and build it
-**02.** Open console navigate to "**AzureQuest.Web**" folder and run the command  "`dotnet ef database update`"
- **03.** Open the database on the "**SQL Server Object Explorer**" and run the query "`SELECT * FROM dbo.AspnetUsers`"
- **04.** Run the application - register a new user - re-execute the sql query - check the results
+**01.** Open the project and build it  
+**02.** Open console navigate to "**AzureQuest.Web**" folder and run the command  "`dotnet ef database update`"  
+**03.** Open the database on the "**SQL Server Object Explorer**" and run the query "`SELECT * FROM dbo.AspnetUsers`"  
+**04.** Run the application - register a new user - re-execute the sql query - check the results  
  
 ## Securing the Web Application
 **05.** Create a new account auth0.com 
