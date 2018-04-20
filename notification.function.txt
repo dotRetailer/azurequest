@@ -1,0 +1,25 @@
+using AzureQuest.Common;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using RestSharp;
+using System;
+
+namespace AzureQuest.NotificationFunction
+{
+    public static class NotificationQueueParser
+    {
+        [FunctionName("NotificationQueueParser")]
+        public static void Run([QueueTrigger("azurequest-notification-queue", Connection = "")]string myQueueItem, TraceWriter log)
+        {
+            log.Info($"Notification Queue trigger function begin processing for: {myQueueItem}");
+            var notification = myQueueItem.JsonDeserialize<NotificationQueueItem>();
+            if (notification != null && !string.IsNullOrEmpty(notification.Id))
+            {
+                var host = Environment.GetEnvironmentVariable("AzureQuestAPIUrl", EnvironmentVariableTarget.Process);
+                Common.SecureRequest.RequestClient.Request($"{host}/api/notification/{notification.Id}", Method.POST);
+            }
+            log.Info($"Notification Queue trigger function processed: {myQueueItem}");
+        }
+
+    }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQuest.Web", "AzureQuest.Web\AzureQuest.Web.csproj", "{2B4EE4A5-5A97-4C00-8172-81BA0EFB368A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQuest.Api", "AzureQuest.Api\AzureQuest.Api.csproj", "{C5CBA7E5-8F11-4BE6-8DD4-A80079CA04C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQuest.Common", "AzureQuest.Common\AzureQuest.Common.csproj", "{B3CFBAE8-A987-4D3D-A422-306523693223}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6B0CE2C-B664-4F97-8673-65D682577ED5}
+	EndGlobalSection
+EndGlobal

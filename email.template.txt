@@ -1,0 +1,8 @@
+Hello <%user%>!<br />
+<br />
+Plase, check the details of a Task that you have subscribed for changes:<br />
+<br />
+Task: <%task-title%><br />
+Date: <%task-date%><br />
+Status: <%task-status%><br />
+<%tracking%>

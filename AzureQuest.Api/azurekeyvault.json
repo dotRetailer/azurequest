@@ -1,0 +1,7 @@
+﻿{
+  "azureKeyVault": {
+    "vault": "{MyKeyVaultName}",
+    "clientId": "{MyApiRegistrationId}",
+    "clientSecret": "{MyApiGeneratedKeySecret}"
+  }
+}
