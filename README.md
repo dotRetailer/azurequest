@@ -9,7 +9,7 @@ This is a sample project to be used during the demonstration of architecture tec
 **04.** Run the application - register a new user - re-execute the sql query - check the results  
  
 ## Securing the Web Application  
-**05.** Create a new account auth0.com   
+**05.** Create a new account on http://auth0.com   
 **06.** Create a new project and name it `{AuthProjectName}`    
 **07.** Create an Application and name it "**`{AuthProjectName}` WebApp**" and select the type "*Regular Web Applications*"  
 **08.** Go to the settings page and set the following values:    
@@ -102,7 +102,7 @@ This is a sample project to be used during the demonstration of architecture tec
 **68.** Set a break point on the function and run it, if you have items on the queue it should hit  
 **69.** Go to the function on azure, in the application settings set the following values:    
 >"AzureQuestAPIUrl": "http://{MyApiName}.azurewebsites.net/"    
->"AzureQuestAPIAuth": "{"client_id":"{Auth0WebAppClientId}","client_secret":"{Auth0WebAppClientSecret}","audience":"{Auth0WebApiIdentifier}","grant_type":"client_credentials"}"      
+>"AzureQuestAPIAuth": "{\"client_id\":\"{Auth0WebAppClientId\",\"client_secret\":\"{Auth0WebAppClientSecret}\",\"audience\":\"{Auth0WebApiIdentifier}\",\"grant_type\":\"client_credentials\"}"
 >    
 >(You can copy the *AzureQuestAPIAuth*from the  curl section of the auth0 testing page, note that there are no backslashes in this value, different from the *local.settings.json* file)      
   
@@ -110,8 +110,8 @@ This is a sample project to be used during the demonstration of architecture tec
 **71.** Go to the task website and create another task, go to the details page and change it status to "`Complete/Cancel`" to generate another notification  
 **72.** Go to the function on azure and look at the page "Monitor" to see the processing of the notification    
 **73.** After the processing, go to the sendgrid control panel and access the activity menu to see the data of notification message  
-**74.** After you see the "Delivered" type of activity on sendgrid the email message should be in your inbox    
-**75.** Open the message on your inbox and go back to sendgrid to see the activity type "Open" in the list  
+**74.** After you see the "`Delivered`" type of activity on sendgrid the email message should be in your inbox    
+**75.** Open the message on your inbox and go back to sendgrid to see the activity type "`Open`" in the list  
 >You can check the file "`/AzureQuest.Api/Providers/SendGridProvider.cs`" to understand how the integration is being handled and the tracking options are set    
   
 ## Server Side Monitoring    
@@ -131,7 +131,7 @@ This is a sample project to be used during the demonstration of architecture tec
 **87.** Open the file "/AzureQuest.Web/Startup.cs" and un-comment the line 49 where the custom middleware is configured (if not un-commented already)    
 **88.** Open the file "`/AzureQuest.Web/Views/_Layout.cshtml`" and un-comment the sentry code at the bottom replacing the key from the auth0 settings page "`Popular/Javascript`"  
 **89.** Open the file "`/AzureQuest.Web/Views/Home/About.cshtml`" and un-comment the javascript code at the bottom that generates an error for testing purpose    
-**90.** Publish the application, make sure you logged out, and try to access the about menu, go back and authenticate yourself, now access the about page again. You can now go sentry dashboard and see the insights.  
+**90.** Publish the application, make sure you logged out, and try to access the about menu, go back and authenticate yourself, now access the about page again. You can now go to sentry dashboard and see the insights.  
     
 ## Contributing  
 Contributions are welcome, just get in touch with me and we can sort it out.    
