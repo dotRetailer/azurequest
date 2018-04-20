@@ -124,7 +124,7 @@ This is a sample project to be used during the demonstration of architecture tec
 **82.** The same strategy can also be used to enable app insights on the other projects (web, function, etc) and benefit from the same functionality  
 **83.** Check other telemetry options the app insights page    
   
-## Server Side Monitoring    
+## Client Side Monitoring    
 **84.** Go to https://sentry.io/ and create an account, go to your new project page, click on the settings tab and on the menu "`Error Tracking`"  
 **85.** Add the nuget package "SharpRaven" on the webproject (if not there yet)    
 **86.** Open the file "`/AzureQuest.Web/Services/CustomExceptionHandlerMiddleware.cs`" and un-comment the `RavenClient` lines updating the client key from the auth0 settings pages "`Popular/C#`"  
