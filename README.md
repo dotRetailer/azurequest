@@ -13,10 +13,10 @@ This is a sample project to be used during the demonstration of architecture tec
 **06.** Create a new project and name it `{AuthProjectName}`
 **07.** Create an Application and name it "**`{AuthProjectName}` WebApp**" and select the type "*Regular Web Applications*"
 **08.** Go to the settings page and set the following values:
-> "Allowed Callback URLs": "https://localhost:44300/signin-auth0"
-> "Allowed Web Origins": "https://localhost:44300"
-> "Allowed Logout URLs": "https://localhost:44300"
-> 
+> "Allowed Callback URLs": "https://localhost:44300/signin-auth0"  
+> "Allowed Web Origins": "https://localhost:44300"  
+> "Allowed Logout URLs": "https://localhost:44300"  
+
 **09.** Open the file "`/AzureQuest.Web/appsettings.Development.json`" and setup *domain, clientId and clientSecret*
 **10.** Open the file "`/AzureQuest.Web/Startup.cs`" un-comment the lines 27 and 28 *(or the Auth0 config lines)*
 **11.** Right click on the project, set as startup project, run the application - register as new user - get authenticated
