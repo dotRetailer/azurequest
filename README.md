@@ -51,9 +51,9 @@ This is a sample project to be used during the demonstration of architecture tec
 **33.** Open file "`/AzureQuest.Web/appsettings.json`" and copy oauth settings from the "`appsettings.development.json`" replacing the app address for the recent created web app, also use the same data to fill the setting "`AzureQuestAPIAuth`"
 **34.** Publish the web application and after finished, click on the login menu and check the error page
 **35.** Go to the web app on azure e select Application Settings, and create both connection strings: 
->"MyAPIAddress": "https://{my-api-name}.azurewebsites.net/"
->"DefaultConnection": "data source={server}.database.windows.net;initial catalog={dbname};user id={user};password={password};MultipleActiveResultSets=True"
->
+>"MyAPIAddress": "https://{my-api-name}.azurewebsites.net/"  
+>"DefaultConnection": "data source={server}.database.windows.net;initial catalog={dbname};user id={user};password={password};MultipleActiveResultSets=True"  
+
 **36.** Goto the web app url and click on login again to see the new error
 **37.** Go to the Auth0 control panel and add the azure web app url on the `callback, origin and logout` settings
 **38.** Go back to the application, and try to login again - it should work by now!
@@ -94,17 +94,17 @@ This is a sample project to be used during the demonstration of architecture tec
 **65.** Copy the function sample from the file "`/notification.function.txt`", make sure to preserve the correct queue name on top the function
 **66.** Add reference to the common project and to the nuget package for RestSharp and fix the imports
 **67.** Open the file "`/AzureQuest.NotificationFn/local.settings.json`" and add the keys to able to debugger locally the function:
->"AzureQuestAPIUrl": "http://localhost:54572",
->"AzureQuestAPIAuth": "{\"client_id\":\"{Auth0WebAppClientId}\",\"client_secret\":\"{Auth0WebAppClientSecret}\",\"audience\":\"{Auth0WebApiIdentifier}\",\"grant_type\":\"client_credentials\"}"
->
->(You can copy the *AzureQuestAPIAuth* value from the web app project)
+>"AzureQuestAPIUrl": "http://localhost:54572"  
+>"AzureQuestAPIAuth": "{\"client_id\":\"{Auth0WebAppClientId}\",\"client_secret\":\"{Auth0WebAppClientSecret}\",\"audience\":\"{Auth0WebApiIdentifier}\",\"grant_type\":\"client_credentials\"}"  
+>  
+>(You can copy the *AzureQuestAPIAuth* value from the web app project)  
 
 **68.** Set a break point on the function and run it, if you have items on the queue it should hit
 **69.** Go to the function on azure, in the application settings set the following values:
->"AzureQuestAPIUrl": "http://{MyApiName}.azurewebsites.net/"
->"AzureQuestAPIAuth": "{"client_id":"{Auth0WebAppClientId}","client_secret":"{Auth0WebAppClientSecret}","audience":"{Auth0WebApiIdentifier}","grant_type":"client_credentials"}"
->
->(You can copy the *AzureQuestAPIAuth*from the  curl section of the auth0 testing page, note that there are no backslashes in this value, different from the *local.settings.json* file)
+>"AzureQuestAPIUrl": "http://{MyApiName}.azurewebsites.net/"  
+>"AzureQuestAPIAuth": "{"client_id":"{Auth0WebAppClientId}","client_secret":"{Auth0WebAppClientSecret}","audience":"{Auth0WebApiIdentifier}","grant_type":"client_credentials"}"  
+>  
+>(You can copy the *AzureQuestAPIAuth*from the  curl section of the auth0 testing page, note that there are no backslashes in this value, different from the *local.settings.json* file)  
 
 **70.** Publish the function on the previous created function app service
 **71.** Go to the task website and create another task, go to the details page and change it status to "`Complete/Cancel`" to generate another notification
